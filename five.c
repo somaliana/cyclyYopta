@@ -11,13 +11,21 @@ int main() {
         copyN /= 10;
 
     }
-    int desiredDigit;
-    int i = 1;
-    while (i <= k) {
-        desiredDigit = n%10;
-        n /= 10;
-        i++;
+    int i = 0;
+    int copyN2 = n;
+    while (copyN2>0) {
+        copyN2 = copyN2/10;
+        i += 1;
     }
+    int desiredDigit;
+    int j = 1;
+    while(i+1-k>=j) {
+        desiredDigit = n%10;
+        n = n/10;
+        j++;
+    }
+    
+    
     printf("%lf", pow(firstDigit,desiredDigit));
 
 
